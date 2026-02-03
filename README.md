@@ -4,8 +4,8 @@
 
 | X        | Minimum              |
 |------------------|----------------------------|
-| **CPU**          | 4 |
-| **RAM**          | 10++ GB                     |
-| **SSD**      | 50 GB SDD                   |
-| **Internet**      | 100 Mbps |
+| **CPU**          | 4+ |
+| **RAM**          | 8+ GB                     |
+| **SSD**      | 50+ GB SDD                   |
+| **Internet**      | 50+ Mbps |
 | **Ubuntu**      | Ubuntu 24 |
