@@ -75,6 +75,7 @@ cargo build --release
 ```bash
 ./target/release/nexus-network start --node-id `YOUR_ID` --max-threads X
 ```
+---
 
 ## 🔄 How to Update
 
