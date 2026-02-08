@@ -10,8 +10,7 @@
 | **Internet**      | 50+ |
 | **Ubuntu**      | Ubuntu 24 |
 
-
--  ## https://app.nexus.xyz/ - Sign up for the site using the EVM Wallet or Email address in the upper right corner. :
+https://app.nexus.xyz/ - Sign up for the site using the EVM Wallet or Email address in the upper right corner.
 
 -  ## 0. Become Root :
 
@@ -52,8 +51,8 @@ nano src/consts.rs
 ```
 2. Find this line: pub const PROJECTED_MEMORY_REQUIREMENT: u64 = 4294967296;
 3. Replace 4294967296 with your choice
--  ## For ~2GB per thread: Change the number to 2000000000 :
--  ## For ~3GB per thread: Change the number to 3000000000 :
+- For ~2GB per thread: Change the number to 2000000000
+- For ~3GB per thread: Change the number to 3000000000
 4. Save & Exit: Press CTRL+O, then Enter, then CTRL+X
 
 -  ## ⚠️ Why are we doing this? :
