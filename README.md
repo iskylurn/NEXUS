@@ -42,16 +42,16 @@ source $HOME/.cargo/env
 git clone https://github.com/nexus-xyz/network-api.git
 cd network-api/clients/cli
 ```
-## 4. Custom RAM
-By default, Nexus asks for ~4GB RAM per Thread. If you don't change the default value, the math looks like this:
-- Default: 4GB per Thread × 8 Threads = 32GB RAM needed.
+## 4. Custom RAM & (The "Thread vs RAM" Math)
+Example you might have 32GB RAM and wonder: "Why can't i run 8 Threads?" The answer is the Default
+Reservation
+- Default: 1 Thread 4.29 GB = 8 Threads 34.32 GB
+- Custom: 1 Thread 2 GB = 8 Threads 16 GB
 
-By changing the value to 2000000000 (2GB), you make it efficient:
-- Custom: 2GB per Thread × 8 threads = 16GB RAM needed.
-
-Quick Guide for 8 Threads
-- For ~2GB per Thread: Change the number to 2000000000
-- For ~3GB per Thread: Change the number to 3000000000
+| Thread Count | Default (4GB/th) | Optimized (2GB/th) |
+| :--- | :--- | :--- |
+| 4 Threads | 17.1 GB RAM ❌ | 8 GB RAM ✅ |
+| 8 Threads | 34.3 GB RAM ❌ | 16 GB RAM ✅ |
 
 1. Open the config file:
 ```bash
@@ -61,7 +61,10 @@ nano src/consts.rs
 
 3. Replace 4294967296 with your choice
 
-4. Save & Exit: Press CTRL+O, then Enter, then CTRL+X
+- To use ~2GB per Thread: Change it to 2000000000
+- To use ~3GB per Thread: Change it to 3000000000
+
+5. Save & Exit: Press CTRL+O, then Enter, then CTRL+X
 
 ## 5. Build the Beast
 ```bash
