@@ -3,21 +3,20 @@
 ![image](https://framerusercontent.com/images/rj7WYEn8kN0pgryMvb583AzieU.png)
 
 | X        | Minimum              |
-|------------------|----------------------------|
+|------------------|----------------------------|   -  https://app.nexus.xyz/ - Sign up for the site using the wallet or email address in the upper right corner.
 | **CPU**          | 4+ |
 | **RAM**          | 8+                     |
 | **SSD**      | 50+ GB                   |
 | **Internet**      | 50+ |
 | **Ubuntu**      | Ubuntu 24 |
-
-
--  https://app.nexus.xyz/ - Sign up for the site using the wallet or email address in the upper right corner.
   
 
 -  ## 1. Install core tools for building the node : 
 
 ```bash
 sudo apt update && sudo apt upgrade -y
+```
+```bash
 sudo apt install curl iptables build-essential git -y
 ```
 
