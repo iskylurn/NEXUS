@@ -45,6 +45,7 @@ cd network-api/clients/cli
 ## 4. Custom RAM
 By default, Nexus asks for ~4GB RAM per Thread. If you don't change the default value, the math looks like this:
 - Default: 4GB per Thread × 8 Threads = 32GB RAM needed.
+
 By changing the value to 2000000000 (2GB), you make it efficient:
 - Custom: 2GB per Thread × 8 threads = 16GB RAM needed.
 
