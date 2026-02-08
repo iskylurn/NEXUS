@@ -2,8 +2,10 @@
 
 ![image](https://framerusercontent.com/images/rj7WYEn8kN0pgryMvb583AzieU.png)
 
+-  ## https://app.nexus.xyz/ - Sign up for the site using the EVM Wallet or Email address in the upper right corner. :
+
 | X        | Minimum              |
-|------------------|----------------------------|   -  https://app.nexus.xyz/ - Sign up for the site using the wallet or email address in the upper right corner.
+|------------------|----------------------------|
 | **CPU**          | 4+ |
 | **RAM**          | 8+                     |
 | **SSD**      | 50+ GB                   |
@@ -11,7 +13,7 @@
 | **Ubuntu**      | Ubuntu 24 |
   
 
--  ## 1. Install core tools for building the node : 
+-  ## 1. Install Core Tools : 
 
 ```bash
 sudo apt update && sudo apt upgrade -y
