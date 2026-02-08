@@ -12,7 +12,7 @@
 
 https://app.nexus.xyz/ - Sign up for the site using the EVM Wallet or Email address in the upper right corner.
 
-## 0. Become Root
+## Become Root
 
 Before we start, let's get full control of the system to avoid "Permission Denied" errors. This command logs you in as the superuser (root)
 
