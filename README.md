@@ -73,10 +73,10 @@ cargo build --release
 
 ## 6. Start CLI :
 ```bash
-./target/release/nexus-network start --node-id YOUR_ID --max-threads X
+./target/release/nexus-network start --node-id `YOUR_ID` --max-threads X
 ```
 
-🔄 How to Update
+## 🔄 How to Update
 
 When a new version of Nexus CLI (e.g., 0.10.XX) is released, follow these steps to update without losing your custom RAM performance.
 ## 1. Pull the Latest Code
@@ -106,7 +106,7 @@ cargo build --release
 ## 4. Restart the Node
 
 ```bash
-./target/release/nexus-network start --node-id YOUR_ID --max-threads X
+./target/release/nexus-network start --node-id `YOUR_ID` --max-threads X
 ```
 
 
