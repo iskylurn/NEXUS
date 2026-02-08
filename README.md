@@ -64,7 +64,7 @@ nano src/consts.rs
 - To use ~2GB per Thread: Change it to 2000000000
 - To use ~3GB per Thread: Change it to 3000000000
 
-5. Save & Exit: Press CTRL+O, then Enter, then CTRL+X
+5. Save & Exit: Press `CTRL+O`, then `Enter`, then `CTRL+X`
 
 ## 5. Build the Beast
 ```bash
@@ -72,6 +72,39 @@ cargo build --release
 ```
 
 ## 6. Start CLI :
+```bash
+./target/release/nexus-network start --node-id YOUR_ID --max-threads X
+```
+
+🔄 How to Update
+
+When a new version of Nexus CLI (e.g., 0.10.XX) is released, follow these steps to update without losing your custom RAM performance.
+## 1. Pull the Latest Code
+
+```bash
+cd ~/network-api
+git pull
+```
+
+## 2. Re-apply the RAM Tweak (Crucial)
+A git `pull might` reset the `consts.rs` file to its default values. You must check if your custom RAM limit is still there:
+
+```bash
+nano clients/cli/src/consts.rs
+```
+- Find: pub const `PROJECTED_MEMORY_REQUIREMENT: u64 = 4294967296;`
+- Change it back to: `2000000000` (Or Your Preferred Value)
+- Save & Exit: `CTRL+O`, `Enter`, `CTRL+X`
+
+## 3. Re-build the Binary
+
+```bash
+cd clients/cli
+cargo build --release
+```
+
+## 4. Restart the Node
+
 ```bash
 ./target/release/nexus-network start --node-id YOUR_ID --max-threads X
 ```
