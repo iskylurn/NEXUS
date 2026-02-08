@@ -43,18 +43,14 @@ git clone https://github.com/nexus-xyz/network-api.git
 cd network-api/clients/cli
 ```
 ## 4. Custom RAM
-By default, Nexus asks for ~4GB RAM per Thread. If you want to run max Threads, your might crash. Let's fix that.
-
-## Why are we doing this?
-Nexus allocates RAM based on the number of threads. If you don't change the default value, the math looks like this:
+By default, Nexus asks for ~4GB RAM per Thread. If you don't change the default value, the math looks like this:
 - Default: 4GB per Thread × 8 Threads = 32GB RAM needed.
-By changing the value to 2,000,000,000 (2GB), you make it efficient:
-- Custom: 2GB per thread × 8 threads = 16GB RAM needed.
-- 
-##Quick Guide for 8 Threads
+By changing the value to 2000000000 (2GB), you make it efficient:
+- Custom: 2GB per Thread × 8 threads = 16GB RAM needed.
+
+Quick Guide for 8 Threads
 - For ~2GB per Thread: Change the number to 2000000000
 - For ~3GB per Thread: Change the number to 3000000000
--
 
 1. Open the config file:
 ```bash
@@ -71,7 +67,7 @@ nano src/consts.rs
 cargo build --release
 ```
 
-## 5. Start CLI :
+## 6. Start CLI :
 ```bash
 ./target/release/nexus-network start --node-id YOUR_ID --max-threads X
 ```
