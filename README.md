@@ -45,23 +45,26 @@ cd network-api/clients/cli
 ## 4. Custom RAM
 By default, Nexus asks for ~4GB RAM per Thread. If you want to run max Threads, your might crash. Let's fix that.
 
+## Why are we doing this?
+Nexus allocates RAM based on the number of threads. If you don't change the default value, the math looks like this:
+- Default: 4GB per Thread × 8 Threads = 32GB RAM needed.
+By changing the value to 2,000,000,000 (2GB), you make it efficient:
+- Custom: 2GB per thread × 8 threads = 16GB RAM needed.
+- 
+##Quick Guide for 8 Threads
+- For ~2GB per Thread: Change the number to 2000000000
+- For ~3GB per Thread: Change the number to 3000000000
+-
+
 1. Open the config file:
 ```bash
 nano src/consts.rs
 ```
-2. Find this line: pub const PROJECTED_MEMORY_REQUIREMENT: u64 = 4294967296;
+2. Find this line: pub const: PROJECTED_MEMORY_REQUIREMENT: u64 = 4294967296;
 
 3. Replace 4294967296 with your choice
 
-4. Specify how much RAM each Thread will consume
-
-- For ~2GB per thread: Change the number to 2000000000
-- For ~3GB per thread: Change the number to 3000000000
-
 4. Save & Exit: Press CTRL+O, then Enter, then CTRL+X
-
-## ⚠️ Why are we doing this?
-If you don't change this number, your node will likely give an "Out of Memory" error or simply fail to start when you use the --max-threads command. By lowering this value, we "trick" the node into starting with less RAM, allowing our Threads to run smoothly on standard VPS setups.
 
 ## 5. Build the Beast
 ```bash
