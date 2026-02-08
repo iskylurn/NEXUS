@@ -57,9 +57,9 @@ Reservation
 ```bash
 nano src/consts.rs
 ```
-2. Find this line: pub const: PROJECTED_MEMORY_REQUIREMENT: u64 = 4294967296;
+2. Find this line: pub const: `PROJECTED_MEMORY_REQUIREMENT: u64 = 4294967296;`
 
-3. Replace 4294967296 with your choice
+3. Replace `4294967296` with your choice
 
 - To use ~2GB per Thread: Change it to 2000000000
 - To use ~3GB per Thread: Change it to 3000000000
